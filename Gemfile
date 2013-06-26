@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'therubyracer'
+gem 'bcrypt-ruby'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,7 +11,7 @@ group :development do
 	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'annotate'
-	gem 'bcrypt-ruby'
+	
 
 end
 
