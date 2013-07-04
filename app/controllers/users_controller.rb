@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-  	@rahul=User.new
+  	@user=User.new
   end
  
   def show
@@ -8,11 +8,14 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@rahul=User.new(params[:user])
-  	if @rahul.save
-      flash[:success]= "welcome to the sample app"
-  		redirect_to @rahul
+  	@user=User.new(params[:user])
+
+  	if @user.save
+      sign_in @user
+      flash[:success]= "Welcome to the sample app"
+  		redirect_to @user
   	else
+  
   		render 'new'
   	end
 
